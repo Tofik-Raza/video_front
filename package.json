@@ -1,0 +1,8 @@
+{
+    "name": "video-calling-frontend",
+    "public": "./public",
+    "builds": [
+      { "src": "public/index.html", "use": "@vercel/static" }
+    ]
+  }
+  

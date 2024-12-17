@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Video Calling</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <h1>Real-Time Video Calling</h1>
+
+    <div class="container">
+        <div>
+            <h3>Your Video</h3>
+            <video id="localVideo" autoplay muted></video>
+        </div>
+        <div>
+            <h3>Server Stream</h3>
+            <video id="serverVideo" autoplay></video>
+        </div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
