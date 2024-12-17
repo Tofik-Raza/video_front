@@ -23,9 +23,9 @@ navigator.mediaDevices
         }, 100);
 
         // Listen for frames from the server
-        socket.on("receive_frame", (frame) => {
+        socket.on("receive_frame", (data) => {
             const img = new Image();
-            img.src = frame;
+            img.src = `data:image/jpeg;base64,${data.frame}`;
             img.onload = () => {
                 const serverCanvas = document.createElement("canvas");
                 serverCanvas.width = img.width;
@@ -35,6 +35,7 @@ navigator.mediaDevices
                 serverVideo.srcObject = serverCanvas.captureStream();
             };
         });
+        
     })
     .catch((error) => {
         console.error("Error accessing webcam:", error);
